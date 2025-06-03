@@ -1,182 +1,246 @@
 <!DOCTYPE html>
 <html lang="en-US">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#083362">
-    <title>PKR Bot Commands</title>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>PKR Bot Commands - Official Documentation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#083362">
+  
+  <!-- WordPress or site styles (adapt paths as needed) -->
+  <link rel="stylesheet" href="https://magnataur.com/wp-content/themes/magnataur-custom-theme/style.min.css" type="text/css" media="all">
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    body {
+      font-family: "Jost", sans-serif;
+      margin: 0;
+      padding: 0;
+    }
 
-    <!-- Include any relevant CSS from your main site -->
-    <link rel="stylesheet" href="https://magnataur.com/wp-content/themes/magnataur-custom-theme/style.min.css" type="text/css" media="all">
-    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-      /* Additional custom styles, if you want them: */
-      body {
-        font-family: "Jost", sans-serif;
-        margin: 0;
-        padding: 0;
-      }
-      header.main-banner {
-        /* We’ll keep the top nav, but remove any large hero styling */
-        background-color: #fff;
-      }
-      /* Basic styling for the page container */
-      .commands-container {
-        max-width: 960px;
-        margin: 0 auto;
-        padding: 40px 20px;
-      }
-      h1 {
-        margin-bottom: 0.5em;
-      }
-      h2 {
-        margin-top: 2em;
-        margin-bottom: 0.5em;
-      }
-      code {
-        background-color: #f4f4f4;
-        padding: 2px 4px;
-        border-radius: 4px;
-      }
-      .command-example {
-        background: #f9f9f9;
-        padding: 0.75em;
-        margin: 0.75em 0 1.5em;
-        border-left: 4px solid #d6d6d6;
-      }
-      .command-example code {
-        display: inline-block;
-        margin-bottom: 0.25em;
-      }
-    </style>
-  </head>
+    /* Page container for doc content */
+    .docs-container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
 
-  <body class="home page page-id-25" id="top-of-page">
-    <!-- Reuse your existing site’s header with logo & nav -->
-    <header class="main-banner headroom headroom--not-bottom headroom--not-top headroom--unpinned">
-      <div class="container">
-        <div class="nav-logo-wrap">
-          <a href="https://magnataur.com" class="brand" title="Home">
-            <img class="scrolled" src="https://magnataur.com/wp-content/themes/magnataur-custom-theme/assets/img/svg/logo-horiz-white.svg" alt="Company Logo">
-            <img class="static" src="https://magnataur.com/wp-content/themes/magnataur-custom-theme/assets/img/svg/logo.svg" alt="Company Logo">
-          </a>
-        </div>
+    h1, h2, h3 {
+      font-weight: 600;
+    }
+    
+    .doc-section {
+      margin-bottom: 3em;
+    }
 
-        <nav>
-          <div class="desktop-nav-wrap">
-            <ul id="menu-primary-nav" class="desktop-menu">
-              <li class="menu-item"><a href="https://pkrbot.com">PKR™</a></li>
-              <li class="menu-item"><a href="https://pkrbot.com/privacy.html">Privacy Policy</a></li>
-              <li class="menu-item"><a href="https://pkrbot.com/terms.html">Terms of Use</a></li>
-              <li class="menu-item"><a href="https://pkrbot.com/support.html">Support</a></li>
-            </ul>
-          </div>
-        </nav>
+    /* A subtle highlight box for code examples */
+    .example-block {
+      background: #f9f9f9;
+      padding: 1em;
+      margin: 1em 0;
+      border-left: 4px solid #d6d6d6;
+      font-family: monospace;
+      white-space: pre-wrap;
+    }
+
+    table.flags-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1em;
+    }
+    table.flags-table th,
+    table.flags-table td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      vertical-align: top;
+    }
+    table.flags-table th {
+      background: #f5f5f5;
+      width: 25%;
+      text-align: left;
+    }
+  </style>
+</head>
+<body class="home page page-id-25" id="top-of-page">
+
+  <!-- Reuse your existing site’s header -->
+  <header class="main-banner headroom headroom--not-bottom headroom--not-top headroom--unpinned">
+    <div class="container">
+      <div class="nav-logo-wrap">
+        <a href="https://magnataur.com" class="brand" title="Home">
+          <img class="scrolled" src="https://magnataur.com/wp-content/themes/magnataur-custom-theme/assets/img/svg/logo-horiz-white.svg" alt="Company Logo">
+          <img class="static" src="https://magnataur.com/wp-content/themes/magnataur-custom-theme/assets/img/svg/logo.svg" alt="Company Logo">
+        </a>
       </div>
-    </header>
 
-    <main>
-      <div class="commands-container">
-        <h1>PKR™ Bot Commands</h1>
-        <p>
-          PKR™ is your Agile/Scrum “Planning Poker” bot for Microsoft Teams. Below are the main text commands
-          you can type in a Teams chat, along with flags for customizing your rounds.
-        </p>
+      <nav>
+        <div class="desktop-nav-wrap">
+          <ul id="menu-primary-nav" class="desktop-menu">
+            <li class="menu-item"><a href="https://pkrbot.com">PKR™</a></li>
+            <li class="menu-item"><a href="https://pkrbot.com/privacy.html">Privacy Policy</a></li>
+            <li class="menu-item"><a href="https://pkrbot.com/terms.html">Terms of Use</a></li>
+            <li class="menu-item"><a href="https://pkrbot.com/support.html">Support</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
 
-        <!-- BEGIN Command -->
+  <!-- Main Content -->
+  <main>
+    <div class="docs-container">
+      <h1>PKR™ Bot — Official Commands Documentation</h1>
+      <p>
+        This page details the commands available in PKR™ (Planning Poker) Bot for Microsoft Teams. 
+        You can type these commands in any chat that includes PKRbot. Each command may have optional flags to customize behavior.
+      </p>
+
+      <hr>
+
+      <!-- BEGIN Command Section -->
+      <section class="doc-section" id="begin-command">
         <h2>@PKR begin</h2>
         <p>
-          Starts a new planning poker round in the current chat. By default, it prompts everyone to submit an estimate for
-          30 seconds on a “points” scale. You can override certain aspects with flags:
+          Starts a new planning poker round in the current chat. By default, it uses a 30-second timer and a “points” scale
+          with as many participants as the chat includes.
         </p>
-        <ul>
-          <li><code>title &quot;My Task&quot;</code> – (Optional) sets the round’s title.</li>
-          <li><code>time &lt;seconds&gt;</code> – changes the round timer from the default 30 seconds to your chosen value.</li>
-          <li><code>participants &lt;N&gt;</code> – if you want to override how many participants are expected in the round.</li>
-        </ul>
-        <div class="command-example">
-          <code>@PKR begin title "Revamp Website" time 60</code><br>
-          <small>Starts a new round with a 60-second timer and the title “Revamp Website.”</small>
+
+        <h3>Usage</h3>
+        <div class="example-block">
+@PKR begin [flags...]
         </div>
 
-        <!-- CONFIG Command -->
+        <h3>Supported Flags</h3>
+        <table class="flags-table">
+          <tr>
+            <th>Flag</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td><code>title &lt;text&gt;</code></td>
+            <td>Sets a title for the round, e.g., <code>title "Onboarding Flow"</code>. Default is blank.</td>
+          </tr>
+          <tr>
+            <td><code>time &lt;seconds&gt;</code></td>
+            <td>Overrides the 30-second timer with your own value, e.g., <code>time 60</code>.</td>
+          </tr>
+          <tr>
+            <td><code>participants &lt;N&gt;</code></td>
+            <td>Manually sets how many participants are expected, if needed.</td>
+          </tr>
+        </table>
+
+        <h3>Example</h3>
+        <div class="example-block">
+@PKR begin title "Revamp Website" time 60 participants 10
+        </div>
+      </section>
+
+      <!-- CONFIG Command Section -->
+      <section class="doc-section" id="config-command">
         <h2>@PKR config</h2>
         <p>
-          Opens a configuration card where you can set your default scale (Points, T-shirt, or Fibonacci), default round timer,
-          enable/disable confidence input, and opt to have the bot send private (personal) config cards to your DMs or keep them in the current chat.
+          Opens your personal configuration card, where you can set default scale (Points/T-Shirt/Fibonacci), default timer, 
+          toggle confidence input, choose anonymous responses, etc. 
         </p>
-        <div class="command-example">
-          <code>@PKR config</code><br>
-          <small>Displays your user settings card.</small>
+
+        <h3>Usage</h3>
+        <div class="example-block">
+@PKR config
         </div>
 
-        <!-- HELP Command -->
+        <p>No flags are supported for this command.</p>
+      </section>
+
+      <!-- HELP Command Section -->
+      <section class="doc-section" id="help-command">
         <h2>@PKR help</h2>
         <p>
-          Shows a help card in the chat with quick actions and links to usage instructions. 
-          Use this if you forget the basic commands or want to explore more features.
+          Displays a help card in the chat with quick start buttons (e.g. “Begin”, “Config”) 
+          and a link to more resources.
         </p>
-        <div class="command-example">
-          <code>@PKR help</code><br>
-          <small>Displays the PKR™ help card.</small>
+
+        <h3>Usage</h3>
+        <div class="example-block">
+@PKR help
         </div>
 
-        <!-- HISTORY Command -->
+        <p>No flags are supported for this command.</p>
+      </section>
+
+      <!-- HISTORY Command Section -->
+      <section class="doc-section" id="history-command">
         <h2>@PKR history</h2>
         <p>
-          Lists some of your past estimation rounds, letting you review final results or re-estimate if needed.
-          The following flags are supported:
+          Searches and displays your past estimation rounds, letting you review final results
+          or re-estimate. If you have a large number of old rounds, you can limit the count or 
+          include older (legacy) rounds from a previous version.
         </p>
-        <ul>
-          <li>
-            <code>limit &lt;N&gt;</code> - Restricts how many rounds to show (default <strong>10</strong>).
-          </li>
-          <li>
-            <code>legacy</code> - Includes older v1 data (from prior to May 2025) in the listing. 
-            Typically these are read from the legacy table, with numeric votes only. 
-          </li>
-        </ul>
-        <div class="command-example">
-          <code>@PKR history limit 20 legacy</code><br>
-          <small>Shows up to 20 of your old rounds, including any v1 (legacy) data from the legacy table.</small>
+
+        <h3>Usage</h3>
+        <div class="example-block">
+@PKR history [flags...]
         </div>
 
-        <hr style="margin: 2em 0;">
+        <h3>Supported Flags</h3>
+        <table class="flags-table">
+          <tr>
+            <th>Flag</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td><code>limit &lt;N&gt;</code></td>
+            <td>Maximum number of rounds to display. Default is <strong>10</strong>.</td>
+          </tr>
+          <tr>
+            <td><code>legacy</code></td>
+            <td>Includes older v1 (pre-May 2025) data from the legacy table, if available.</td>
+          </tr>
+        </table>
 
-        <p><strong>Questions or need more info?</strong> Head over to our 
-           <a href="https://pkrbot.com/">main PKR™ page</a> or 
-           <a href="https://pkrbot.com/support.html">Support page</a>.</p>
+        <h3>Example</h3>
+        <div class="example-block">
+@PKR history limit 20 legacy
+        </div>
+      </section>
+
+      <hr>
+
+      <p>
+        <strong>Need additional help?</strong> Check out 
+        <a href="https://pkrbot.com/support.html">PKRbot Support</a> 
+        or contact your system administrator.
+      </p>
+    </div>
+  </main>
+
+  <!-- Reuse your existing site’s footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer--logo">
+        <a href="#top-of-page" class="footer-brand" title="Go to Top of Page">
+          <img src="https://magnataur.com/wp-content/themes/magnataur-custom-theme/assets/img/svg/logo-white.svg" alt="Company Logo">
+        </a>
       </div>
-    </main>
 
-    <footer class="footer">
-      <div class="container">
-        <div class="footer--logo">
-          <a href="#top-of-page" class="footer-brand" title="Go to Top of Page">
-            <img src="https://magnataur.com/wp-content/themes/magnataur-custom-theme/assets/img/svg/logo-white.svg" alt="Company Logo">
-          </a>
-        </div>
-
-        <div class="footer--menu">
-          <div class="footer-nav-wrap">
-            <ul class="footer-menu">
-              <li><a href="https://magnataur.com/about/">About</a></li>
-              <li><a href="https://magnataur.com/approach/">Approach</a></li>
-              <li><a href="https://magnataur.com/services/">Services</a></li>
-              <li><a href="https://magnataur.com/insights/">Insights</a></li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="footer--copyright">
-          <p>copyright 2025 magnataur. all rights reserved.</p>
+      <div class="footer--menu">
+        <div class="footer-nav-wrap">
+          <ul class="footer-menu">
+            <li class="menu-item"><a href="https://magnataur.com/about/">About</a></li>
+            <li class="menu-item"><a href="https://magnataur.com/approach/">Approach</a></li>
+            <li class="menu-item"><a href="https://magnataur.com/services/">Services</a></li>
+            <li class="menu-item"><a href="https://magnataur.com/insights/">Insights</a></li>
+          </ul>
         </div>
       </div>
-    </footer>
 
-    <!-- If needed, scripts at the bottom -->
-    <script src="https://magnataur.com/wp-includes/js/jquery/jquery.min.js"></script>
-    <!-- ... etc. ... -->
-  </body>
+      <div class="footer--copyright">
+        <p>copyright 2025 magnataur. all rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- (Optional) Scripts -->
+  <script src="https://magnataur.com/wp-includes/js/jquery/jquery.min.js"></script>
+</body>
 </html>
