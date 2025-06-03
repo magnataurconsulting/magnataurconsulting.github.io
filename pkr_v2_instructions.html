@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#083362">
+  <title>PKRbot — Detailed Instructions</title>
+
+  <!-- REPLACE or ADD any links to the same CSS/JS from your existing site -->
+  <link rel="stylesheet" id="main-stylesheet-css"
+        href="https://magnataur.com/wp-content/themes/magnataur-custom-theme/style.min.css?1614279326&ver=5.6.2"
+        type="text/css" media="all">
+  <!-- Additional styles (Google Fonts, plugin CSS, etc.) can go here if needed. -->
+
+  <style>
+    /* Optional: Add your own local tweaks or custom styles here */
+    img.placeholder {
+      display: block;
+      margin: 1.5rem auto;
+      max-width: 100%;
+      border: 2px dashed #ccc;
+      background: #f9f9f9;
+      padding: 1rem;
+      text-align: center;
+      color: #999;
+      font-style: italic;
+    }
+  </style>
+</head>
+
+<body class="home page-template-default page">
+
+  <!-- START: Header (copy from your existing layout) -->
+  <header class="main-banner">
+    <div class="container">
+      <div class="nav-logo-wrap">
+        <a href="https://magnataur.com" class="brand" title="Home">
+          <img class="scrolled" src="https://magnataur.com/wp-content/themes/magnataur-custom-theme/assets/img/svg/logo-horiz-white.svg" alt="Company Logo">
+          <img class="static" src="https://magnataur.com/wp-content/themes/magnataur-custom-theme/assets/img/svg/logo.svg" alt="Company Logo">
+        </a>
+      </div>
+      <nav>
+        <div class="desktop-nav-wrap">
+          <ul class="desktop-menu">
+            <li><a href="https://pkrbot.com">PKR™</a></li>
+            <li><a href="https://pkrbot.com/privacy.html">Privacy Policy</a></li>
+            <li><a href="https://pkrbot.com/terms.html">Terms of Use</a></li>
+            <li><a href="https://pkrbot.com/support.html">Support</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <!-- END: Header -->
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-large animated inview" style="background-image: url('https://magnataur.com/wp-content/uploads/2021/01/bg1.svg');">
+      <div class="container">
+        <div class="hero-large--content">
+          <div class="inner">
+            <h1>How to Run a Round of Planning Poker with PKRbot</h1>
+            <p>This page provides step-by-step instructions on how to use PKRbot for your Agile or Scrum estimation rounds in Microsoft Teams.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Instructions Section -->
+    <section id="instructions" class="post-single animated inview">
+      <article class="article-single">
+        <div class="article-single__title">
+          <div class="container">
+            <h2>Step-by-Step Guide</h2>
+          </div>
+        </div>
+
+        <div class="article-single__content">
+          <div class="container">
+            <div class="inner">
+
+              <!-- STEP 1 -->
+              <h3>Step 1: Invite PKRbot to Your Team Chat</h3>
+              <p>
+                Make sure PKRbot is already installed in your Microsoft Teams environment. 
+                If it’s not, please follow the <a href="https://pkrbot.com#install">Installation instructions</a>. 
+                Once installed, invite PKRbot to the specific channel or group chat where you and your team discuss tasks or user stories.
+              </p>
+              <img class="placeholder"
+                   src="#"
+                   alt="Placeholder for screenshot - Invite PKRbot to channel"
+                   title="(Screenshot placeholder: Invite PKRbot to channel)">
+
+              <!-- STEP 2 -->
+              <h3>Step 2: Use the “Begin” Command</h3>
+              <p>
+                In the chat where PKRbot is present, type <code>@PKR begin</code>. 
+                This will bring up a card allowing you to configure a new planning poker round. 
+                You can specify a custom title, round timer, or estimation scale.
+              </p>
+              <img class="placeholder"
+                   src="#"
+                   alt="Placeholder for screenshot - The begin command"
+                   title="(Screenshot placeholder: The begin command)">
+
+              <!-- STEP 3 -->
+              <h3>Step 3: Fill in Round Details</h3>
+              <p>
+                PKRbot supports multiple estimation scales (like <strong>points</strong>, <strong>fibonacci</strong>, and <strong>t-shirt</strong>) 
+                plus optional confidence scoring. You can also choose how long the estimation round should stay open. 
+                Once satisfied, click <strong>Start Round</strong>.
+              </p>
+              <img class="placeholder"
+                   src="#"
+                   alt="Placeholder for screenshot - Round config card"
+                   title="(Screenshot placeholder: Round config card)">
+
+              <!-- STEP 4 -->
+              <h3>Step 4: Submit Your Estimates</h3>
+              <p>
+                Every participant in the chat should see a submission card with an input for their estimate 
+                (plus an optional confidence input if you enabled it). Each user fills in their estimate before time runs out. 
+              </p>
+              <img class="placeholder"
+                   src="#"
+                   alt="Placeholder for screenshot - Submissions example"
+                   title="(Screenshot placeholder: Submissions example)">
+
+              <!-- STEP 5 -->
+              <h3>Step 5: Review the Results</h3>
+              <p>
+                When time is up or everyone has submitted, PKRbot replaces the submission card with a results card. 
+                This card shows the mean and standard deviation of all numeric estimates. 
+                If confidence was enabled, you’ll also see the average confidence and its stddev.
+              </p>
+              <img class="placeholder"
+                   src="#"
+                   alt="Placeholder for screenshot - Results card"
+                   title="(Screenshot placeholder: Results card)">
+
+              <!-- STEP 6 -->
+              <h3>Step 6: Re-Estimate or Comment to Jira</h3>
+              <p>
+                If you linked your Jira ticket in the config, you can click <strong>“Comment results to Jira”</strong> 
+                right from the results card to post an update back to your Jira issue. 
+                Or click <strong>“Re-estimate Ticket”</strong> to quickly start another round if you need to refine your estimates further.
+              </p>
+              <img class="placeholder"
+                   src="#"
+                   alt="Placeholder for screenshot - Re-estimate or comment to Jira"
+                   title="(Screenshot placeholder: Re-estimate or comment to Jira)">
+
+              <p style="margin-top:2rem;">
+                That’s it! You’ve successfully run a planning poker round with PKRbot. 
+                For more commands, type <code>@PKR help</code> or check the <a href="https://pkrbot.com#usage">Usage Docs</a>.
+              </p>
+
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <!-- START: Footer (copy from your existing layout) -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer--logo">
+        <a href="#top-of-page" class="footer-brand" title="Go to Top of Page">
+          <img src="https://magnataur.com/wp-content/themes/magnataur-custom-theme/assets/img/svg/logo-white.svg" alt="Company Logo">
+        </a>
+      </div>
+      <div class="footer--menu">
+        <div class="footer-nav-wrap">
+          <ul class="footer-menu">
+            <li><a href="https://pkrbot.com">PKR™</a></li>
+            <li><a href="https://pkrbot.com/privacy.html">Privacy Policy</a></li>
+            <li><a href="https://pkrbot.com/terms.html">Terms of Use</a></li>
+            <li><a href="https://pkrbot.com/support.html">Support</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer--copyright">
+        <p>© 2025 magnataur. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  <!-- END: Footer -->
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#083362">
+  <title>PKRbot — Detailed Instructions</title>
+
+  <!-- REPLACE or ADD any links to the same CSS/JS from your existing site -->
+  <link rel="stylesheet" id="main-stylesheet-css"
+        href="https://magnataur.com/wp-content/themes/magnataur-custom-theme/style.min.css?1614279326&ver=5.6.2"
+        type="text/css" media="all">
+  <!-- Additional styles (Google Fonts, plugin CSS, etc.) can go here if needed. -->
+
+  <style>
+    /* Optional: Add your own local tweaks or custom styles here */
+    img.placeholder {
+      display: block;
+      margin: 1.5rem auto;
+      max-width: 100%;
+      border: 2px dashed #ccc;
+      background: #f9f9f9;
+      padding: 1rem;
+      text-align: center;
+      color: #999;
+      font-style: italic;
+    }
+  </style>
+</head>
+
+<body class="home page-template-default page">
+
+  <!-- START: Header (copy from your existing layout) -->
+  <header class="main-banner">
+    <div class="container">
+      <div class="nav-logo-wrap">
+        <a href="https://magnataur.com" class="brand" title="Home">
+          <img class="scrolled" src="https://magnataur.com/wp-content/themes/magnataur-custom-theme/assets/img/svg/logo-horiz-white.svg" alt="Company Logo">
+          <img class="static" src="https://magnataur.com/wp-content/themes/magnataur-custom-theme/assets/img/svg/logo.svg" alt="Company Logo">
+        </a>
+      </div>
+      <nav>
+        <div class="desktop-nav-wrap">
+          <ul class="desktop-menu">
+            <li><a href="https://pkrbot.com">PKR™</a></li>
+            <li><a href="https://pkrbot.com/privacy.html">Privacy Policy</a></li>
+            <li><a href="https://pkrbot.com/terms.html">Terms of Use</a></li>
+            <li><a href="https://pkrbot.com/support.html">Support</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <!-- END: Header -->
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-large animated inview" style="background-image: url('https://magnataur.com/wp-content/uploads/2021/01/bg1.svg');">
+      <div class="container">
+        <div class="hero-large--content">
+          <div class="inner">
+            <h1>How to Run a Round of Planning Poker with PKRbot</h1>
+            <p>This page provides step-by-step instructions on how to use PKRbot for your Agile or Scrum estimation rounds in Microsoft Teams.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Instructions Section -->
+    <section id="instructions" class="post-single animated inview">
+      <article class="article-single">
+        <div class="article-single__title">
+          <div class="container">
+            <h2>Step-by-Step Guide</h2>
+          </div>
+        </div>
+
+        <div class="article-single__content">
+          <div class="container">
+            <div class="inner">
+
+              <!-- STEP 1 -->
+              <h3>Step 1: Invite PKRbot to Your Team Chat</h3>
+              <p>
+                Make sure PKRbot is already installed in your Microsoft Teams environment. 
+                If it’s not, please follow the <a href="https://pkrbot.com#install">Installation instructions</a>. 
+                Once installed, invite PKRbot to the specific channel or group chat where you and your team discuss tasks or user stories.
+              </p>
+              <img class="placeholder"
+                   src="#"
+                   alt="Placeholder for screenshot - Invite PKRbot to channel"
+                   title="(Screenshot placeholder: Invite PKRbot to channel)">
+
+              <!-- STEP 2 -->
+              <h3>Step 2: Use the “Begin” Command</h3>
+              <p>
+                In the chat where PKRbot is present, type <code>@PKR begin</code>. 
+                This will bring up a card allowing you to configure a new planning poker round. 
+                You can specify a custom title, round timer, or estimation scale.
+              </p>
+              <img class="placeholder"
+                   src="#"
+                   alt="Placeholder for screenshot - The begin command"
+                   title="(Screenshot placeholder: The begin command)">
+
+              <!-- STEP 3 -->
+              <h3>Step 3: Fill in Round Details</h3>
+              <p>
+                PKRbot supports multiple estimation scales (like <strong>points</strong>, <strong>fibonacci</strong>, and <strong>t-shirt</strong>) 
+                plus optional confidence scoring. You can also choose how long the estimation round should stay open. 
+                Once satisfied, click <strong>Start Round</strong>.
+              </p>
+              <img class="placeholder"
+                   src="#"
+                   alt="Placeholder for screenshot - Round config card"
+                   title="(Screenshot placeholder: Round config card)">
+
+              <!-- STEP 4 -->
+              <h3>Step 4: Submit Your Estimates</h3>
+              <p>
+                Every participant in the chat should see a submission card with an input for their estimate 
+                (plus an optional confidence input if you enabled it). Each user fills in their estimate before time runs out. 
+              </p>
+              <img class="placeholder"
+                   src="#"
+                   alt="Placeholder for screenshot - Submissions example"
+                   title="(Screenshot placeholder: Submissions example)">
+
+              <!-- STEP 5 -->
+              <h3>Step 5: Review the Results</h3>
+              <p>
+                When time is up or everyone has submitted, PKRbot replaces the submission card with a results card. 
+                This card shows the mean and standard deviation of all numeric estimates. 
+                If confidence was enabled, you’ll also see the average confidence and its stddev.
+              </p>
+              <img class="placeholder"
+                   src="#"
+                   alt="Placeholder for screenshot - Results card"
+                   title="(Screenshot placeholder: Results card)">
+
+              <!-- STEP 6 -->
+              <h3>Step 6: Re-Estimate or Comment to Jira</h3>
+              <p>
+                If you linked your Jira ticket in the config, you can click <strong>“Comment results to Jira”</strong> 
+                right from the results card to post an update back to your Jira issue. 
+                Or click <strong>“Re-estimate Ticket”</strong> to quickly start another round if you need to refine your estimates further.
+              </p>
+              <img class="placeholder"
+                   src="#"
+                   alt="Placeholder for screenshot - Re-estimate or comment to Jira"
+                   title="(Screenshot placeholder: Re-estimate or comment to Jira)">
+
+              <p style="margin-top:2rem;">
+                That’s it! You’ve successfully run a planning poker round with PKRbot. 
+                For more commands, type <code>@PKR help</code> or check the <a href="https://pkrbot.com#usage">Usage Docs</a>.
+              </p>
+
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <!-- START: Footer (copy from your existing layout) -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer--logo">
+        <a href="#top-of-page" class="footer-brand" title="Go to Top of Page">
+          <img src="https://magnataur.com/wp-content/themes/magnataur-custom-theme/assets/img/svg/logo-white.svg" alt="Company Logo">
+        </a>
+      </div>
+      <div class="footer--menu">
+        <div class="footer-nav-wrap">
+          <ul class="footer-menu">
+            <li><a href="https://pkrbot.com">PKR™</a></li>
+            <li><a href="https://pkrbot.com/privacy.html">Privacy Policy</a></li>
+            <li><a href="https://pkrbot.com/terms.html">Terms of Use</a></li>
+            <li><a href="https://pkrbot.com/support.html">Support</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer--copyright">
+        <p>© 2025 magnataur. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  <!-- END: Footer -->
+
+</body>
+</html>
