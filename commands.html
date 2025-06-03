@@ -5,53 +5,48 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#083362">
-  <title>PKR Bot - CLI Commands</title>
+  <title>PKR Bot - CLI Command Reference</title>
 
-  <!-- Match the same CSS, icons, fonts, and scripts from your existing site’s index.html -->
+  <!-- Example styles/fonts from your existing site -->
   <link rel="icon" href="https://magnataur.com/wp-content/uploads/2021/01/cropped-favicon-32x32.png" sizes="32x32">
   <link rel="icon" href="https://magnataur.com/wp-content/uploads/2021/01/cropped-favicon-192x192.png" sizes="192x192">
   <link rel="apple-touch-icon" href="https://magnataur.com/wp-content/uploads/2021/01/cropped-favicon-180x180.png">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,500;0,600;0,700;1,300;1,400;1,500&display=swap" rel="stylesheet">
-
-  <!-- Example: Your theme’s main stylesheet -->
   <link rel="stylesheet" href="https://magnataur.com/wp-content/themes/magnataur-custom-theme/style.min.css" type="text/css" media="all">
-  
+
   <style>
-    /* Example custom styling for this page */
-    .hero-large--content h1 {
-      font-size: 3rem;
-      margin-bottom: 0.5em;
-    }
-    .hero-large--content h2 {
-      font-size: 2rem;
-    }
-    .hero-large--content p {
-      margin-top: 1em;
-      max-width: 800px;
-    }
-    .cli-command-table {
+    /* Minimal custom styling for this commands page */
+    .article-single__content table {
       width: 100%;
       border-collapse: collapse;
-      margin-top: 2em;
+      margin-top: 1.5rem;
     }
-    .cli-command-table th, .cli-command-table td {
-      border: 1px solid #ddd;
-      padding: 12px;
+    .article-single__content th,
+    .article-single__content td {
+      border: 1px solid #e2e2e2;
+      padding: 0.75rem;
     }
-    .cli-command-table th {
-      background: #f4f4f4;
+    .article-single__content th {
+      background: #f7f7f7;
       text-align: left;
+      font-weight: 600;
     }
-    .highlight {
-      background: #e4f7ff; /* example highlight */
+    .command-example {
+      background: #fdfdfd;
+      border: 1px solid #eee;
+      padding: 0.75rem;
+      margin-top: 0.5rem;
+      margin-bottom: 1rem;
+      font-family: Consolas, monospace;
+      white-space: pre-wrap;
     }
   </style>
 </head>
 
 <body class="home page-template-default page page-id-25" id="top-of-page">
 
-<!-- HEADER (matches your existing site) -->
+<!-- HEADER -->
 <header class="main-banner headroom">
   <div class="container">
     <div class="nav-logo-wrap">
@@ -64,7 +59,7 @@
     <nav>
       <div class="desktop-nav-wrap">
         <ul id="menu-primary-nav" class="desktop-menu">
-          <!-- Adjust or remove menu items as needed -->
+          <!-- Adjust any items as needed -->
           <li><a href="https://pkrbot.com">PKR™</a></li>
           <li><a href="https://pkrbot.com/privacy.html">Privacy Policy</a></li>
           <li><a href="https://pkrbot.com/terms.html">Terms of Use</a></li>
@@ -81,156 +76,156 @@
 <!-- END HEADER -->
 
 <main>
-
-<!-- HERO SECTION -->
-<section class="hero-large home-hero-large animated inview" style="background-image: url('https://magnataur.com/wp-content/uploads/2021/01/bg1.svg');">
-  <div class="container">
-    <div class="hero-large--content">
-      <h1>PKR Bot - CLI Commands</h1>
-      <h2>A Quick Reference for Your Planning Poker Sessions</h2>
-      <p>
-        This page documents the command-line style flags and commands you can use in Microsoft Teams
-        to run planning poker rounds with PKR. If you prefer a more visual approach, use 
-        <code>@PKR begin</code> to open an interactive card.
-      </p>
-    </div>
-  </div>
-</section>
-
-<!-- COMMANDS SECTION -->
-<section class="post-single animated inview">
-  <article class="article-single">
-    <div class="article-single__title">
-      <div class="container">
-        <h1>Command Reference</h1>
+  <section class="post-single animated inview">
+    <article class="article-single">
+      <div class="article-single__title">
+        <div class="container">
+          <h1>PKR Bot - CLI Command Reference</h1>
+        </div>
       </div>
-    </div>
 
-    <div class="article-single__content">
-      <div class="container">
-        <div class="inner">
+      <div class="article-single__content">
+        <div class="container">
+          <div class="inner">
 
-          <h2>Basic Usage</h2>
-          <p>
-            To invoke a command, type <code>@PKR</code> (or your bot’s name) followed by the 
-            command. For example:
-          </p>
-          <pre><code>@PKR begin time 60 title "My Round Title"</code></pre>
-          <p>
-            Make sure Microsoft Teams recognizes your mention of the bot (it should appear in purple 
-            text or show the bot’s icon next to <code>@PKR</code>) so that the message is 
-            interpreted as a command rather than regular chat text.
-          </p>
+            <h2>Overview</h2>
+            <p>
+              PKR Bot recognizes text-based commands in Microsoft Teams 
+              when you mention <code>@PKR</code>. You can add 
+              flags (<code>title</code>, <code>time</code>, etc.) 
+              for advanced usage. 
+            </p>
+            <p>
+              Example: 
+            </p>
+            <div class="command-example">
+@PKR begin title "My Round Title" time 60
+            </div>
+            <p>
+              Make sure Teams recognizes your mention (the bot name 
+              should appear in purple or show the PKR icon).
+            </p>
 
-          <h2>Common Commands</h2>
-          <table class="cli-command-table">
-            <thead>
-              <tr>
-                <th style="width:30%;">Command</th>
-                <th style="width:70%;">Description</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><code>begin</code></td>
-                <td>Starts a new planning poker round. Accepts flags like <code>title</code>, <code>time</code>, <code>participants</code>, and more.</td>
-              </tr>
-              <tr>
-                <td><code>history</code></td>
-                <td>Shows previously completed rounds. Use flags such as <code>limit</code>, <code>startDate</code>, <code>endDate</code>, and <code>legacy</code>.</td>
-              </tr>
-              <tr>
-                <td><code>config</code></td>
-                <td>Opens an adaptive card with your default poker settings (timer, scale, confidence, etc.).</td>
-              </tr>
-              <tr>
-                <td><code>help</code></td>
-                <td>Displays a help card with quick action buttons.</td>
-              </tr>
-            </tbody>
-          </table>
+            <h2>Commands</h2>
+            <table>
+              <thead>
+                <tr><th>Command</th><th>Purpose</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>begin</code></td>
+                  <td>Start a new planning poker round. Accepts flags for customizing the session (see below).</td>
+                </tr>
+                <tr>
+                  <td><code>history</code></td>
+                  <td>Search and display past rounds. Accepts flags like <code>limit</code>, <code>startDate</code>, <code>endDate</code>, <code>legacy</code>, etc.</td>
+                </tr>
+                <tr>
+                  <td><code>config</code></td>
+                  <td>Shows an interactive configuration card to set your default scale, timer, anonymity, etc.</td>
+                </tr>
+                <tr>
+                  <td><code>help</code></td>
+                  <td>Shows a help card with quick usage tips.</td>
+                </tr>
+              </tbody>
+            </table>
 
-          <h2>Available Flags</h2>
-          <p>
-            Many flags can be combined. For example, 
-            <code>@PKR begin title "Some Ticket" time 60</code> sets a custom title and 60-second timer.
-          </p>
-          <table class="cli-command-table highlight">
-            <thead>
-              <tr>
-                <th>Flag</th>
-                <th>Purpose</th>
-                <th>Example Usage</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><code>title</code></td>
-                <td>Sets a round title (e.g. referencing a user story or ticket).</td>
-                <td><code>@PKR begin title "User Access Reviews"</code></td>
-              </tr>
-              <tr>
-                <td><code>time</code></td>
-                <td>Sets the timer (seconds) for how long the round stays open. Default is 30s.</td>
-                <td><code>@PKR begin time 60</code></td>
-              </tr>
-              <tr>
-                <td><code>participants</code> (or <code>players</code>)</td>
-                <td>Override the participant count if Teams membership can’t be fetched automatically.</td>
-                <td><code>@PKR begin participants 5</code></td>
-              </tr>
-              <tr>
-                <td><code>limit</code> / <code>history</code></td>
-                <td>Shows how many past rounds to retrieve (when using <code>@PKR history</code>).</td>
-                <td><code>@PKR history 20</code> or <code>@PKR history limit 10</code></td>
-              </tr>
-              <tr>
-                <td><code>startDate</code> / <code>endDate</code></td>
-                <td>Filter rounds by date range (format: YYYY-MM-DD).</td>
-                <td><code>@PKR history startDate 2025-06-01 endDate 2025-06-30</code></td>
-              </tr>
-              <tr>
-                <td><code>limitToThisChat</code></td>
-                <td>For <code>history</code>, only return rounds from the current conversation ID.</td>
-                <td><code>@PKR history limitToThisChat true</code></td>
-              </tr>
-              <tr>
-                <td><code>legacy</code></td>
-                <td>Search the older (v1) data in <code>pkr-legacy</code>. Typically used with <code>history</code>.</td>
-                <td><code>@PKR history legacy</code></td>
-              </tr>
-            </tbody>
-          </table>
+            <h2>Flags for <code>begin</code></h2>
+            <table>
+              <thead>
+                <tr><th>Flag</th><th>Description</th><th>Example</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>title</code></td>
+                  <td>Sets a custom round title (e.g., a story name or ticket reference).</td>
+                  <td><code>@PKR begin title "User Login Story"</code></td>
+                </tr>
+                <tr>
+                  <td><code>time</code></td>
+                  <td>Sets the timer (seconds) before the bot closes the round. Default=30s.</td>
+                  <td><code>@PKR begin time 60</code></td>
+                </tr>
+                <tr>
+                  <td><code>participants</code> or <code>players</code></td>
+                  <td>Forces participant count if Teams membership is not accurate or partial.</td>
+                  <td><code>@PKR begin participants 5</code></td>
+                </tr>
+              </tbody>
+            </table>
 
-          <h2>Combining Flags</h2>
-          <p>
-            You can combine multiple flags, for example:
-          </p>
-          <pre><code>@PKR begin title "Backlog Grooming" time 45 participants 4</code></pre>
-          <p>
-            The bot will parse all flags and start a new round accordingly.
-          </p>
+            <h2>Flags for <code>history</code></h2>
+            <table>
+              <thead>
+                <tr><th>Flag</th><th>Description</th><th>Example</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>limit</code></td>
+                  <td>Number of past rounds to show. Default=10.</td>
+                  <td><code>@PKR history limit 20</code></td>
+                </tr>
+                <tr>
+                  <td><code>startDate</code> / <code>endDate</code></td>
+                  <td>Restrict results to a date range, formatted <code>YYYY-MM-DD</code>.</td>
+                  <td><code>@PKR history startDate 2025-06-01 endDate 2025-06-30</code></td>
+                </tr>
+                <tr>
+                  <td><code>limitToThisChat</code></td>
+                  <td>Restrict results to the current conversation or channel only.</td>
+                  <td><code>@PKR history limitToThisChat true</code></td>
+                </tr>
+                <tr>
+                  <td><code>legacy</code></td>
+                  <td>Includes older v1 data from the <code>pkr-legacy</code> table in the search.</td>
+                  <td><code>@PKR history legacy</code></td>
+                </tr>
+                <tr>
+                  <td><code>searchTitle</code></td>
+                  <td>Fuzzy search by round title substring.</td>
+                  <td><code>@PKR history searchTitle "Backend"</code></td>
+                </tr>
+              </tbody>
+            </table>
 
-          <h2>Further Help</h2>
-          <p>
-            Type <code>@PKR help</code> at any time for a quick help card. 
-            If you need additional guidance, see our 
-            <a href="https://pkrbot.com/support.html">Support</a> page or 
-            <a href="https://pkrbot.com">Homepage</a> for more details.
-          </p>
+            <h2>Combining Flags</h2>
+            <p>
+              You can combine multiple flags in one command:
+            </p>
+            <div class="command-example">
+@PKR begin title "XYZ Feature" time 45 participants 6
+            </div>
+            <p>
+              The bot will parse all flags in order. 
+              Similarly, for history:
+            </p>
+            <div class="command-example">
+@PKR history startDate 2025-01-01 endDate 2025-12-31 limit 25
+            </div>
 
-        </div><!-- .inner -->
-      </div><!-- .container -->
-    </div><!-- .article-single__content -->
-  </article>
-</section>
+            <h2>Tips &amp; Troubleshooting</h2>
+            <ul>
+              <li>Always mention <code>@PKR</code> so Teams routes your text to the bot.</li>
+              <li>Use quotes around multi-word titles, e.g. <code>title "Bug Fix - Payment Flow"</code>.</li>
+              <li>If you see “Unrecognized command,” check your syntax or mention <code>@PKR help</code>.</li>
+            </ul>
 
+            <p>
+              For a broader overview, see 
+              <a href="instructions.html">Full Usage Instructions</a>.
+            </p>
+
+          </div><!-- .inner -->
+        </div><!-- .container -->
+      </div><!-- .article-single__content -->
+    </article>
+  </section>
 </main>
 
-<!-- FOOTER (matches your existing site) -->
+<!-- FOOTER -->
 <footer class="footer">
   <div class="container">
-
     <div class="footer--logo">
       <a href="#top-of-page" class="footer-brand" title="Go to Top of Page">
         <img src="https://magnataur.com/wp-content/themes/magnataur-custom-theme/assets/img/svg/logo-white.svg" alt="Company Logo">
@@ -251,11 +246,10 @@
     <div class="footer--copyright">
       <p>Copyright © 2025 Magnataur. All rights reserved.</p>
     </div>
-
   </div>
 </footer>
 
-<!-- Scripts from your site’s index.html or theme -->
+<!-- Scripts -->
 <script src="https://magnataur.com/wp-includes/js/jquery/jquery.min.js"></script>
 <script src="https://magnataur.com/wp-includes/js/jquery/jquery-migrate.min.js"></script>
 <script src="https://magnataur.com/wp-content/themes/magnataur-custom-theme/assets/js/all.min.js"></script>
