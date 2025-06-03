@@ -5,253 +5,169 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#083362">
-  <title>PKR Bot - CLI Command Reference</title>
+  <title>PKR Bot – CLI Flags</title>
 
-  <!-- Example styles/fonts from your existing site -->
+  <!-- Example references to your existing style/theme -->
+  <link rel="stylesheet" href="https://magnataur.com/wp-content/themes/magnataur-custom-theme/style.min.css?ver=5.6.2">
   <link rel="icon" href="https://magnataur.com/wp-content/uploads/2021/01/cropped-favicon-32x32.png" sizes="32x32">
-  <link rel="icon" href="https://magnataur.com/wp-content/uploads/2021/01/cropped-favicon-192x192.png" sizes="192x192">
-  <link rel="apple-touch-icon" href="https://magnataur.com/wp-content/uploads/2021/01/cropped-favicon-180x180.png">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,500;0,600;0,700;1,300;1,400;1,500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://magnataur.com/wp-content/themes/magnataur-custom-theme/style.min.css" type="text/css" media="all">
 
   <style>
-    /* Minimal custom styling for this commands page */
-    .article-single__content table {
-      width: 100%;
+    /* Optional inline overrides or additional style */
+    .cli-flags-table {
+      margin: 2em auto;
       border-collapse: collapse;
-      margin-top: 1.5rem;
+      width: 90%;
+      max-width: 800px;
     }
-    .article-single__content th,
-    .article-single__content td {
-      border: 1px solid #e2e2e2;
-      padding: 0.75rem;
+    .cli-flags-table th,
+    .cli-flags-table td {
+      border: 1px solid #ddd;
+      padding: 8px 10px;
     }
-    .article-single__content th {
-      background: #f7f7f7;
-      text-align: left;
-      font-weight: 600;
-    }
-    .command-example {
-      background: #fdfdfd;
-      border: 1px solid #eee;
-      padding: 0.75rem;
-      margin-top: 0.5rem;
-      margin-bottom: 1rem;
-      font-family: Consolas, monospace;
-      white-space: pre-wrap;
+    .cli-flags-table th {
+      background-color: #f7f7f7;
+      font-weight: bold;
     }
   </style>
 </head>
 
-<body class="home page-template-default page page-id-25" id="top-of-page">
-
-<!-- HEADER -->
-<header class="main-banner headroom">
-  <div class="container">
-    <div class="nav-logo-wrap">
-      <a href="https://magnataur.com" class="brand" title="Home">
-        <img class="scrolled" src="https://magnataur.com/wp-content/themes/magnataur-custom-theme/assets/img/svg/logo-horiz-white.svg" alt="Company Logo">
-        <img class="static" src="https://magnataur.com/wp-content/themes/magnataur-custom-theme/assets/img/svg/logo.svg" alt="Company Logo">
-      </a>
-    </div>
-
-    <nav>
-      <div class="desktop-nav-wrap">
-        <ul id="menu-primary-nav" class="desktop-menu">
-          <!-- Adjust any items as needed -->
-          <li><a href="https://pkrbot.com">PKR™</a></li>
-          <li><a href="https://pkrbot.com/privacy.html">Privacy Policy</a></li>
-          <li><a href="https://pkrbot.com/terms.html">Terms of Use</a></li>
-          <li><a href="https://pkrbot.com/support.html">Support</a></li>
-        </ul>
+<body class="home page page-id-0" id="top-of-page">
+  <!-- Header/Nav (similar to your existing site) -->
+  <header class="main-banner">
+    <div class="container">
+      <div class="nav-logo-wrap">
+        <a href="https://magnataur.com" class="brand" title="Home">
+          <img class="scrolled" src="https://magnataur.com/wp-content/themes/magnataur-custom-theme/assets/img/svg/logo-horiz-white.svg" alt="Company Logo">
+          <img class="static" src="https://magnataur.com/wp-content/themes/magnataur-custom-theme/assets/img/svg/logo.svg" alt="Company Logo">
+        </a>
       </div>
-    </nav>
 
-    <div class="desktop-nav-button">
-      <a class="button" href="https://magnataur.com/contact/">Contact Us</a>
+      <nav>
+        <div class="desktop-nav-wrap">
+          <ul id="menu-primary-nav" class="desktop-menu">
+            <li><a href="https://pkrbot.com">PKR™</a></li>
+            <li><a href="https://pkrbot.com/privacy.html">Privacy Policy</a></li>
+            <li><a href="https://pkrbot.com/terms.html">Terms of Use</a></li>
+            <li><a href="https://pkrbot.com/support.html">Support</a></li>
+          </ul>
+        </div>
+
+        <div class="mobile-nav-wrap">
+          <div class="mobile-nav-header">
+            <a href="https://magnataur.com" class="mobile-brand" title="Home" aria-label="Go Home">
+              <img src="https://magnataur.com/wp-content/themes/magnataur-custom-theme/assets/img/svg/logo.svg" alt="Company Logo">
+            </a>
+            <button class="navbar-toggle" title="Open Menu" aria-label="Open Menu">
+              <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+            </button>
+          </div>
+          <div class="mobile-nav">
+            <!-- Insert any mobile menu items here if desired -->
+          </div>
+        </div>
+      </nav>
+
+      <div class="desktop-nav-button">
+        <a class="button" href="https://magnataur.com/contact/" title="Schedule a Consult">Schedule a Consult</a>
+      </div>
     </div>
-  </div>
-</header>
-<!-- END HEADER -->
+  </header>
 
-<main>
-  <section class="post-single animated inview">
-    <article class="article-single">
-      <div class="article-single__title">
-        <div class="container">
-          <h1>PKR Bot - CLI Command Reference</h1>
+  <!-- Main Content (no hero section) -->
+  <main>
+    <section class="post-single animated inview">
+      <article class="article-single">
+        <div class="article-single__title">
+          <div class="container">
+            <h1>PKR Bot: CLI Flags Reference</h1>
+          </div>
+        </div>
+
+        <div class="article-single__content">
+          <div class="container">
+            <div class="inner">
+
+              <p>
+                PKR Bot supports a few command-line style flags when you type <code>@PKR history</code> in your Microsoft Teams chat.
+                Only the following flags are currently functional:
+              </p>
+
+              <table class="cli-flags-table">
+                <thead>
+                  <tr>
+                    <th>Flag</th>
+                    <th>Description</th>
+                    <th>Example Usage</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code>limit</code></td>
+                    <td>Show up to this many rounds (default is 10).</td>
+                    <td><code>@PKR history limit 20</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>legacy</code></td>
+                    <td>
+                      Includes older v1 (pre-2025) data from the <code>pkr-legacy</code> table in the results.
+                      This also forces the search to the current conversation ID.
+                    </td>
+                    <td><code>@PKR history legacy</code></td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <h3>Examples</h3>
+              <ul>
+                <li><strong>Show your last 15 rounds:</strong><br>
+                  <code>@PKR history limit 15</code>
+                </li>
+                <li><strong>Retrieve legacy (v1) data only:</strong><br>
+                  <code>@PKR history legacy</code>
+                </li>
+                <li><strong>Combine both flags:</strong><br>
+                  <code>@PKR history legacy limit 5</code>
+                </li>
+              </ul>
+
+              <p><em>Note:</em> Previously documented flags such as <code>startDate</code>, <code>endDate</code>, <code>limitToThisChat</code>, and <code>searchTitle</code> are not currently supported. They’ve been removed from this reference.</p>
+
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer--logo">
+        <a href="#top-of-page" class="footer-brand" title="Go to Top of Page">
+          <img src="https://magnataur.com/wp-content/themes/magnataur-custom-theme/assets/img/svg/logo-white.svg" alt="Company Logo">
+        </a>
+      </div>
+      <div class="footer--menu">
+        <div class="footer-nav-wrap">
+          <ul class="footer-menu">
+            <li><a href="https://magnataur.com/about/">About</a></li>
+            <li><a href="https://magnataur.com/approach/">Approach</a></li>
+            <li><a href="https://magnataur.com/services/">Services</a></li>
+            <li><a href="https://magnataur.com/insights/">Insights</a></li>
+          </ul>
         </div>
       </div>
-
-      <div class="article-single__content">
-        <div class="container">
-          <div class="inner">
-
-            <h2>Overview</h2>
-            <p>
-              PKR Bot recognizes text-based commands in Microsoft Teams 
-              when you mention <code>@PKR</code>. You can add 
-              flags (<code>title</code>, <code>time</code>, etc.) 
-              for advanced usage. 
-            </p>
-            <p>
-              Example: 
-            </p>
-            <div class="command-example">
-@PKR begin title "My Round Title" time 60
-            </div>
-            <p>
-              Make sure Teams recognizes your mention (the bot name 
-              should appear in purple or show the PKR icon).
-            </p>
-
-            <h2>Commands</h2>
-            <table>
-              <thead>
-                <tr><th>Command</th><th>Purpose</th></tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><code>begin</code></td>
-                  <td>Start a new planning poker round. Accepts flags for customizing the session (see below).</td>
-                </tr>
-                <tr>
-                  <td><code>history</code></td>
-                  <td>Search and display past rounds. Accepts flags like <code>limit</code>, <code>startDate</code>, <code>endDate</code>, <code>legacy</code>, etc.</td>
-                </tr>
-                <tr>
-                  <td><code>config</code></td>
-                  <td>Shows an interactive configuration card to set your default scale, timer, anonymity, etc.</td>
-                </tr>
-                <tr>
-                  <td><code>help</code></td>
-                  <td>Shows a help card with quick usage tips.</td>
-                </tr>
-              </tbody>
-            </table>
-
-            <h2>Flags for <code>begin</code></h2>
-            <table>
-              <thead>
-                <tr><th>Flag</th><th>Description</th><th>Example</th></tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><code>title</code></td>
-                  <td>Sets a custom round title (e.g., a story name or ticket reference).</td>
-                  <td><code>@PKR begin title "User Login Story"</code></td>
-                </tr>
-                <tr>
-                  <td><code>time</code></td>
-                  <td>Sets the timer (seconds) before the bot closes the round. Default=30s.</td>
-                  <td><code>@PKR begin time 60</code></td>
-                </tr>
-                <tr>
-                  <td><code>participants</code> or <code>players</code></td>
-                  <td>Forces participant count if Teams membership is not accurate or partial.</td>
-                  <td><code>@PKR begin participants 5</code></td>
-                </tr>
-              </tbody>
-            </table>
-
-            <h2>Flags for <code>history</code></h2>
-            <table>
-              <thead>
-                <tr><th>Flag</th><th>Description</th><th>Example</th></tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><code>limit</code></td>
-                  <td>Number of past rounds to show. Default=10.</td>
-                  <td><code>@PKR history limit 20</code></td>
-                </tr>
-                <tr>
-                  <td><code>startDate</code> / <code>endDate</code></td>
-                  <td>Restrict results to a date range, formatted <code>YYYY-MM-DD</code>.</td>
-                  <td><code>@PKR history startDate 2025-06-01 endDate 2025-06-30</code></td>
-                </tr>
-                <tr>
-                  <td><code>limitToThisChat</code></td>
-                  <td>Restrict results to the current conversation or channel only.</td>
-                  <td><code>@PKR history limitToThisChat true</code></td>
-                </tr>
-                <tr>
-                  <td><code>legacy</code></td>
-                  <td>Includes older v1 data from the <code>pkr-legacy</code> table in the search.</td>
-                  <td><code>@PKR history legacy</code></td>
-                </tr>
-                <tr>
-                  <td><code>searchTitle</code></td>
-                  <td>Fuzzy search by round title substring.</td>
-                  <td><code>@PKR history searchTitle "Backend"</code></td>
-                </tr>
-              </tbody>
-            </table>
-
-            <h2>Combining Flags</h2>
-            <p>
-              You can combine multiple flags in one command:
-            </p>
-            <div class="command-example">
-@PKR begin title "XYZ Feature" time 45 participants 6
-            </div>
-            <p>
-              The bot will parse all flags in order. 
-              Similarly, for history:
-            </p>
-            <div class="command-example">
-@PKR history startDate 2025-01-01 endDate 2025-12-31 limit 25
-            </div>
-
-            <h2>Tips &amp; Troubleshooting</h2>
-            <ul>
-              <li>Always mention <code>@PKR</code> so Teams routes your text to the bot.</li>
-              <li>Use quotes around multi-word titles, e.g. <code>title "Bug Fix - Payment Flow"</code>.</li>
-              <li>If you see “Unrecognized command,” check your syntax or mention <code>@PKR help</code>.</li>
-            </ul>
-
-            <p>
-              For a broader overview, see 
-              <a href="instructions.html">Full Usage Instructions</a>.
-            </p>
-
-          </div><!-- .inner -->
-        </div><!-- .container -->
-      </div><!-- .article-single__content -->
-    </article>
-  </section>
-</main>
-
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer--logo">
-      <a href="#top-of-page" class="footer-brand" title="Go to Top of Page">
-        <img src="https://magnataur.com/wp-content/themes/magnataur-custom-theme/assets/img/svg/logo-white.svg" alt="Company Logo">
-      </a>
-    </div>
-
-    <div class="footer--menu">
-      <div class="footer-nav-wrap">
-        <ul class="footer-menu">
-          <li><a href="https://magnataur.com/about/">About</a></li>
-          <li><a href="https://magnataur.com/approach/">Approach</a></li>
-          <li><a href="https://magnataur.com/services/">Services</a></li>
-          <li><a href="https://magnataur.com/insights/">Insights</a></li>
-        </ul>
+      <div class="footer--copyright">
+        <p>copyright 2025 magnataur. all rights reserved.</p>
       </div>
     </div>
+  </footer>
 
-    <div class="footer--copyright">
-      <p>Copyright © 2025 Magnataur. All rights reserved.</p>
-    </div>
-  </div>
-</footer>
+  <!-- Optional JS includes -->
+  <script src="https://magnataur.com/wp-includes/js/jquery/jquery.min.js?ver=3.5.1"></script>
+  <script src="https://magnataur.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2"></script>
+  <script src="https://magnataur.com/wp-content/themes/magnataur-custom-theme/assets/js/all.min.js"></script>
 
-<!-- Scripts -->
-<script src="https://magnataur.com/wp-includes/js/jquery/jquery.min.js"></script>
-<script src="https://magnataur.com/wp-includes/js/jquery/jquery-migrate.min.js"></script>
-<script src="https://magnataur.com/wp-content/themes/magnataur-custom-theme/assets/js/all.min.js"></script>
 </body>
 </html>
