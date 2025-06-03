@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#083362">
+  <title>PKR Bot - CLI Commands</title>
+
+  <!-- Match the same CSS, icons, fonts, and scripts from your existing site’s index.html -->
+  <link rel="icon" href="https://magnataur.com/wp-content/uploads/2021/01/cropped-favicon-32x32.png" sizes="32x32">
+  <link rel="icon" href="https://magnataur.com/wp-content/uploads/2021/01/cropped-favicon-192x192.png" sizes="192x192">
+  <link rel="apple-touch-icon" href="https://magnataur.com/wp-content/uploads/2021/01/cropped-favicon-180x180.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,500;0,600;0,700;1,300;1,400;1,500&display=swap" rel="stylesheet">
+
+  <!-- Example: Your theme’s main stylesheet -->
+  <link rel="stylesheet" href="https://magnataur.com/wp-content/themes/magnataur-custom-theme/style.min.css" type="text/css" media="all">
+  
+  <style>
+    /* Example custom styling for this page */
+    .hero-large--content h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5em;
+    }
+    .hero-large--content h2 {
+      font-size: 2rem;
+    }
+    .hero-large--content p {
+      margin-top: 1em;
+      max-width: 800px;
+    }
+    .cli-command-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 2em;
+    }
+    .cli-command-table th, .cli-command-table td {
+      border: 1px solid #ddd;
+      padding: 12px;
+    }
+    .cli-command-table th {
+      background: #f4f4f4;
+      text-align: left;
+    }
+    .highlight {
+      background: #e4f7ff; /* example highlight */
+    }
+  </style>
+</head>
+
+<body class="home page-template-default page page-id-25" id="top-of-page">
+
+<!-- HEADER (matches your existing site) -->
+<header class="main-banner headroom">
+  <div class="container">
+    <div class="nav-logo-wrap">
+      <a href="https://magnataur.com" class="brand" title="Home">
+        <img class="scrolled" src="https://magnataur.com/wp-content/themes/magnataur-custom-theme/assets/img/svg/logo-horiz-white.svg" alt="Company Logo">
+        <img class="static" src="https://magnataur.com/wp-content/themes/magnataur-custom-theme/assets/img/svg/logo.svg" alt="Company Logo">
+      </a>
+    </div>
+
+    <nav>
+      <div class="desktop-nav-wrap">
+        <ul id="menu-primary-nav" class="desktop-menu">
+          <!-- Adjust or remove menu items as needed -->
+          <li><a href="https://pkrbot.com">PKR™</a></li>
+          <li><a href="https://pkrbot.com/privacy.html">Privacy Policy</a></li>
+          <li><a href="https://pkrbot.com/terms.html">Terms of Use</a></li>
+          <li><a href="https://pkrbot.com/support.html">Support</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="desktop-nav-button">
+      <a class="button" href="https://magnataur.com/contact/">Contact Us</a>
+    </div>
+  </div>
+</header>
+<!-- END HEADER -->
+
+<main>
+
+<!-- HERO SECTION -->
+<section class="hero-large home-hero-large animated inview" style="background-image: url('https://magnataur.com/wp-content/uploads/2021/01/bg1.svg');">
+  <div class="container">
+    <div class="hero-large--content">
+      <h1>PKR Bot - CLI Commands</h1>
+      <h2>A Quick Reference for Your Planning Poker Sessions</h2>
+      <p>
+        This page documents the command-line style flags and commands you can use in Microsoft Teams
+        to run planning poker rounds with PKR. If you prefer a more visual approach, use 
+        <code>@PKR begin</code> to open an interactive card.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- COMMANDS SECTION -->
+<section class="post-single animated inview">
+  <article class="article-single">
+    <div class="article-single__title">
+      <div class="container">
+        <h1>Command Reference</h1>
+      </div>
+    </div>
+
+    <div class="article-single__content">
+      <div class="container">
+        <div class="inner">
+
+          <h2>Basic Usage</h2>
+          <p>
+            To invoke a command, type <code>@PKR</code> (or your bot’s name) followed by the 
+            command. For example:
+          </p>
+          <pre><code>@PKR begin time 60 title "My Round Title"</code></pre>
+          <p>
+            Make sure Microsoft Teams recognizes your mention of the bot (it should appear in purple 
+            text or show the bot’s icon next to <code>@PKR</code>) so that the message is 
+            interpreted as a command rather than regular chat text.
+          </p>
+
+          <h2>Common Commands</h2>
+          <table class="cli-command-table">
+            <thead>
+              <tr>
+                <th style="width:30%;">Command</th>
+                <th style="width:70%;">Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>begin</code></td>
+                <td>Starts a new planning poker round. Accepts flags like <code>title</code>, <code>time</code>, <code>participants</code>, and more.</td>
+              </tr>
+              <tr>
+                <td><code>history</code></td>
+                <td>Shows previously completed rounds. Use flags such as <code>limit</code>, <code>startDate</code>, <code>endDate</code>, and <code>legacy</code>.</td>
+              </tr>
+              <tr>
+                <td><code>config</code></td>
+                <td>Opens an adaptive card with your default poker settings (timer, scale, confidence, etc.).</td>
+              </tr>
+              <tr>
+                <td><code>help</code></td>
+                <td>Displays a help card with quick action buttons.</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h2>Available Flags</h2>
+          <p>
+            Many flags can be combined. For example, 
+            <code>@PKR begin title "Some Ticket" time 60</code> sets a custom title and 60-second timer.
+          </p>
+          <table class="cli-command-table highlight">
+            <thead>
+              <tr>
+                <th>Flag</th>
+                <th>Purpose</th>
+                <th>Example Usage</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>title</code></td>
+                <td>Sets a round title (e.g. referencing a user story or ticket).</td>
+                <td><code>@PKR begin title "User Access Reviews"</code></td>
+              </tr>
+              <tr>
+                <td><code>time</code></td>
+                <td>Sets the timer (seconds) for how long the round stays open. Default is 30s.</td>
+                <td><code>@PKR begin time 60</code></td>
+              </tr>
+              <tr>
+                <td><code>participants</code> (or <code>players</code>)</td>
+                <td>Override the participant count if Teams membership can’t be fetched automatically.</td>
+                <td><code>@PKR begin participants 5</code></td>
+              </tr>
+              <tr>
+                <td><code>limit</code> / <code>history</code></td>
+                <td>Shows how many past rounds to retrieve (when using <code>@PKR history</code>).</td>
+                <td><code>@PKR history 20</code> or <code>@PKR history limit 10</code></td>
+              </tr>
+              <tr>
+                <td><code>startDate</code> / <code>endDate</code></td>
+                <td>Filter rounds by date range (format: YYYY-MM-DD).</td>
+                <td><code>@PKR history startDate 2025-06-01 endDate 2025-06-30</code></td>
+              </tr>
+              <tr>
+                <td><code>limitToThisChat</code></td>
+                <td>For <code>history</code>, only return rounds from the current conversation ID.</td>
+                <td><code>@PKR history limitToThisChat true</code></td>
+              </tr>
+              <tr>
+                <td><code>legacy</code></td>
+                <td>Search the older (v1) data in <code>pkr-legacy</code>. Typically used with <code>history</code>.</td>
+                <td><code>@PKR history legacy</code></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h2>Combining Flags</h2>
+          <p>
+            You can combine multiple flags, for example:
+          </p>
+          <pre><code>@PKR begin title "Backlog Grooming" time 45 participants 4</code></pre>
+          <p>
+            The bot will parse all flags and start a new round accordingly.
+          </p>
+
+          <h2>Further Help</h2>
+          <p>
+            Type <code>@PKR help</code> at any time for a quick help card. 
+            If you need additional guidance, see our 
+            <a href="https://pkrbot.com/support.html">Support</a> page or 
+            <a href="https://pkrbot.com">Homepage</a> for more details.
+          </p>
+
+        </div><!-- .inner -->
+      </div><!-- .container -->
+    </div><!-- .article-single__content -->
+  </article>
+</section>
+
+</main>
+
+<!-- FOOTER (matches your existing site) -->
+<footer class="footer">
+  <div class="container">
+
+    <div class="footer--logo">
+      <a href="#top-of-page" class="footer-brand" title="Go to Top of Page">
+        <img src="https://magnataur.com/wp-content/themes/magnataur-custom-theme/assets/img/svg/logo-white.svg" alt="Company Logo">
+      </a>
+    </div>
+
+    <div class="footer--menu">
+      <div class="footer-nav-wrap">
+        <ul class="footer-menu">
+          <li><a href="https://magnataur.com/about/">About</a></li>
+          <li><a href="https://magnataur.com/approach/">Approach</a></li>
+          <li><a href="https://magnataur.com/services/">Services</a></li>
+          <li><a href="https://magnataur.com/insights/">Insights</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer--copyright">
+      <p>Copyright © 2025 Magnataur. All rights reserved.</p>
+    </div>
+
+  </div>
+</footer>
+
+<!-- Scripts from your site’s index.html or theme -->
+<script src="https://magnataur.com/wp-includes/js/jquery/jquery.min.js"></script>
+<script src="https://magnataur.com/wp-includes/js/jquery/jquery-migrate.min.js"></script>
+<script src="https://magnataur.com/wp-content/themes/magnataur-custom-theme/assets/js/all.min.js"></script>
+</body>
+</html>
