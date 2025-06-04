@@ -3,160 +3,272 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>PKR Bot - Detailed Instructions</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#083362">
-  <title>PKR Bot - Usage Instructions</title>
 
-  <!-- Example styles/fonts from your existing site -->
-  <link rel="icon" href="https://magnataur.com/wp-content/uploads/2021/01/cropped-favicon-32x32.png" sizes="32x32">
-  <link rel="icon" href="https://magnataur.com/wp-content/uploads/2021/01/cropped-favicon-192x192.png" sizes="192x192">
-  <link rel="apple-touch-icon" href="https://magnataur.com/wp-content/uploads/2021/01/cropped-favicon-180x180.png">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,500;0,600;0,700;1,300;1,400;1,500&display=swap" rel="stylesheet">
+  <!-- Link to your existing site’s styles -->
   <link rel="stylesheet" href="https://magnataur.com/wp-content/themes/magnataur-custom-theme/style.min.css" type="text/css" media="all">
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
-    /* Minimal custom styling for this instructions page */
-    .section-heading {
-      margin-top: 2rem;
-      margin-bottom: 1rem;
-      font-size: 1.6rem;
+    body {
+      font-family: "Jost", sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Page container for doc content */
+    .docs-container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    .instructions-section {
+      margin-bottom: 2em;
+    }
+
+    h1, h2, h3 {
       font-weight: 600;
     }
-    .step {
-      margin-bottom: 1.5rem;
+
+    .placeholder-image {
+      display: block;
+      margin: 1em 0;
+      max-width: 100%;
+      height: auto;
+      border: 2px dashed #ccc;
+      padding: 1em;
+      text-align: center;
+      font-size: 0.9em;
+      color: #555;
+    }
+
+    .highlight-box {
+      background: #f9f9f9;
+      padding: 1em;
+      margin: 1em 0;
+      border-left: 4px solid #d6d6d6;
+    }
+
+    .reply-location-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1em 0;
+    }
+
+    .reply-location-table th,
+    .reply-location-table td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      vertical-align: top;
+    }
+
+    .reply-location-table th {
+      background: #f5f5f5;
+      text-align: left;
+      width: 25%;
     }
   </style>
 </head>
 
-<body class="home page-template-default page page-id-25" id="top-of-page">
+<body class="home page" id="top-of-page">
 
-<!-- HEADER -->
-<header class="main-banner headroom">
-  <div class="container">
-    <div class="nav-logo-wrap">
-      <a href="https://magnataur.com" class="brand" title="Home">
-        <img class="scrolled" src="https://magnataur.com/wp-content/themes/magnataur-custom-theme/assets/img/svg/logo-horiz-white.svg" alt="Company Logo">
-        <img class="static" src="https://magnataur.com/wp-content/themes/magnataur-custom-theme/assets/img/svg/logo.svg" alt="Company Logo">
-      </a>
-    </div>
-
-    <nav>
-      <div class="desktop-nav-wrap">
-        <ul id="menu-primary-nav" class="desktop-menu">
-          <!-- Adjust any items as needed -->
-          <li><a href="https://pkrbot.com">PKR™</a></li>
-          <li><a href="https://pkrbot.com/privacy.html">Privacy Policy</a></li>
-          <li><a href="https://pkrbot.com/terms.html">Terms of Use</a></li>
-          <li><a href="https://pkrbot.com/support.html">Support</a></li>
-        </ul>
+  <!-- Reuse your existing site’s header -->
+  <header class="main-banner headroom headroom--not-bottom headroom--not-top headroom--unpinned">
+    <div class="container">
+      <div class="nav-logo-wrap">
+        <a href="https://magnataur.com" class="brand" title="Home">
+          <img class="scrolled" src="https://magnataur.com/wp-content/themes/magnataur-custom-theme/assets/img/svg/logo-horiz-white.svg" alt="Company Logo">
+          <img class="static" src="https://magnataur.com/wp-content/themes/magnataur-custom-theme/assets/img/svg/logo.svg" alt="Company Logo">
+        </a>
       </div>
-    </nav>
 
-    <div class="desktop-nav-button">
-      <a class="button" href="https://magnataur.com/contact/">Contact Us</a>
+      <nav>
+        <div class="desktop-nav-wrap">
+          <ul id="menu-primary-nav" class="desktop-menu">
+            <li class="menu-item"><a href="https://pkrbot.com">PKR™</a></li>
+            <li class="menu-item"><a href="https://pkrbot.com/privacy.html">Privacy Policy</a></li>
+            <li class="menu-item"><a href="https://pkrbot.com/terms.html">Terms of Use</a></li>
+            <li class="menu-item"><a href="https://pkrbot.com/support.html">Support</a></li>
+          </ul>
+        </div>
+      </nav>
     </div>
-  </div>
-</header>
-<!-- END HEADER -->
+  </header>
 
-<main>
-  <section class="post-single animated inview">
-    <article class="article-single">
-      <div class="article-single__title">
-        <div class="container">
-          <h1>PKR Bot - Usage Instructions</h1>
+  <main>
+    <div class="docs-container">
+
+      <h1>How to Use PKR Bot — Detailed Instructions</h1>
+      <p>
+        Follow these steps to run your first planning poker round in Microsoft Teams using PKRbot. 
+        Below, you’ll also see how to configure the bot’s “reply location” (i.e., whether the configuration 
+        cards appear in your personal chat or the current group chat).
+      </p>
+
+      <!-- 1) Step: Add PKR to your chat/Team -->
+      <section class="instructions-section">
+        <h2>1) Add PKR Bot to Your Chat or Team</h2>
+        <p>
+          If PKR is not already installed, simply click the <code>+</code> icon (or “Get Bots”) in 
+          your Team or chat, search for <strong>“PKR”</strong>, and add it. 
+        </p>
+        <div class="placeholder-image">
+          <strong>[Placeholder Image]</strong><br>
+          Screenshot showing how to add PKR Bot
+        </div>
+      </section>
+
+      <!-- 2) Step: Start a Round -->
+      <section class="instructions-section">
+        <h2>2) Start a Round</h2>
+        <p>
+          In a Teams channel or group chat where PKRbot is present, type:
+        </p>
+        <div class="highlight-box">
+          @PKR begin
+        </div>
+        <p>
+          PKRbot will post a “Round Configuration” card letting you choose options 
+          like the Estimation Scale (points, T-shirt, Fibonacci), the round timer, 
+          and so forth. Then click <strong>Start Round</strong> to begin.
+        </p>
+        <div class="placeholder-image">
+          <strong>[Placeholder Image]</strong><br>
+          Example of the round config card in Teams
+        </div>
+      </section>
+
+      <!-- 3) Step: Submissions Phase -->
+      <section class="instructions-section">
+        <h2>3) Everyone Submits Estimates</h2>
+        <p>
+          PKRbot posts a “Submissions” card listing all participants. As each teammate 
+          submits an estimate (via the Estimation Card PKRbot also provides), you’ll 
+          see a checkmark (or a filled circle) next to their name.
+        </p>
+        <div class="placeholder-image">
+          <strong>[Placeholder Image]</strong><br>
+          Sample submissions tracker card with user statuses
+        </div>
+        <p>
+          Once all participants have submitted—or the timer expires—PKRbot will 
+          automatically reveal final results in a separate “Results” card.
+        </p>
+      </section>
+
+      <!-- 4) Step: Results -->
+      <section class="instructions-section">
+        <h2>4) View Your Results</h2>
+        <p>
+          PKRbot calculates the mean and standard deviation for numeric scales. For 
+          T-shirt sizing, it simply displays what everyone selected. 
+          You can optionally post the results back to Jira (if connected).
+        </p>
+        <div class="placeholder-image">
+          <strong>[Placeholder Image]</strong><br>
+          Results card with mean, std dev, etc.
+        </div>
+      </section>
+
+      <!-- 5) Configuring "Reply Location" Explanation -->
+      <section class="instructions-section">
+        <h2>Choosing Where the Bot Sends Configuration Cards</h2>
+        <p>
+          PKRbot has a “reply location” setting, determining where it sends 
+          configuration-related cards (like the user settings or history search). 
+          You can set this in your <code>@PKR config</code> card, under “Bot Reply Location”.
+        </p>
+
+        <table class="reply-location-table">
+          <tr>
+            <th>Option</th>
+            <th>What Happens?</th>
+          </tr>
+          <tr>
+            <td><strong>Current Chat</strong></td>
+            <td>
+              PKRbot posts config cards in the same channel or group chat 
+              you’re currently in. 
+              <ul>
+                <li>Other users can see these cards, but only you can submit them.</li>
+                <li>Useful if your entire team wants to see changes you make (like enabling 
+                    confidence fields, etc.).</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td><strong>Personal Chat</strong></td>
+            <td>
+              PKRbot will spin up (or reuse) a 1:1 private chat with you to show config or 
+              search cards. 
+              <ul>
+                <li>No one else sees these personal cards or changes you make to your settings.</li>
+                <li>The actual estimation round is still posted in the group chat, 
+                    only the config changes remain private.</li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+
+        <div class="placeholder-image">
+          <strong>[Placeholder Image]</strong><br>
+          Example of user config card that can appear in your personal chat
+        </div>
+      </section>
+
+      <!-- 6) Additional Tips -->
+      <section class="instructions-section">
+        <h2>Additional Tips</h2>
+        <ul>
+          <li>
+            Type <code>@PKR help</code> at any time to see a quick menu of commands 
+            (e.g., <strong>Begin</strong>, <strong>Config</strong>, <strong>History</strong>).
+          </li>
+          <li>
+            If you need to re-estimate a round you already finished, find that 
+            round via <code>@PKR history</code> and click the “Re-estimate Ticket” button 
+            in the results card.
+          </li>
+          <li>
+            Connect PKRbot to your Jira instance (via <code>@PKR config</code>) 
+            to easily post final estimation results to a Jira ticket.
+          </li>
+        </ul>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Reuse your existing site’s footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer--logo">
+        <a href="#top-of-page" class="footer-brand" title="Go to Top of Page">
+          <img src="https://magnataur.com/wp-content/themes/magnataur-custom-theme/assets/img/svg/logo-white.svg" alt="Company Logo">
+        </a>
+      </div>
+
+      <div class="footer--menu">
+        <div class="footer-nav-wrap">
+          <ul class="footer-menu">
+            <li class="menu-item"><a href="https://magnataur.com/about/">About</a></li>
+            <li class="menu-item"><a href="https://magnataur.com/approach/">Approach</a></li>
+            <li class="menu-item"><a href="https://magnataur.com/services/">Services</a></li>
+            <li class="menu-item"><a href="https://magnataur.com/insights/">Insights</a></li>
+          </ul>
         </div>
       </div>
 
-      <div class="article-single__content">
-        <div class="container">
-          <div class="inner">
-
-            <h2 class="section-heading">Getting Started</h2>
-
-            <div class="step">
-              <p><strong>1) Add PKR Bot to Microsoft Teams</strong><br>
-                 Use the Teams app store or “Add apps” in your team chat to add <code>PKR</code> to your desired group chat or channel. 
-                 Then mention <code>@PKR</code> in a chat message to confirm it’s recognized.
-              </p>
-            </div>
-
-            <div class="step">
-              <p><strong>2) Begin a Round</strong><br>
-                 Type <code>@PKR begin</code> in a group chat. 
-                 You should see a card with an estimation scale, time limit, and optional confidence input. 
-                 Everyone in the chat can then submit an estimate.
-              </p>
-            </div>
-
-            <div class="step">
-              <p><strong>3) Review Results</strong><br>
-                 When the timer ends (or all participants have submitted), PKR Bot reveals aggregated results: 
-                 the mean, standard deviation, and optionally confidence stats. 
-                 Use these stats to decide your final story point (or time) estimate.
-              </p>
-            </div>
-
-            <h2 class="section-heading">Advanced Configuration</h2>
-
-            <p>
-              PKR Bot supports custom defaults and flags for more complex sessions. 
-              For example, you can set the default estimation scale to Fibonacci or T-shirt sizes, 
-              or enable anonymous voting. 
-              Type <code>@PKR config</code> to open a settings card. 
-              You can also link PKR Bot to Jira for direct posting of results to your issue tickets.
-            </p>
-
-            <h2 class="section-heading">Optional CLI Flags</h2>
-            <p>
-              If you prefer command-like usage, you can add flags to <code>begin</code> or <code>history</code> commands. 
-              Example: <code>@PKR begin title "Backend Overhaul" time 60</code> sets a custom title and a 60-second timer. 
-              See the full <a href="commands.html">CLI Command Reference</a> for details on all supported flags.
-            </p>
-
-            <h2 class="section-heading">Need More Help?</h2>
-            <p>
-              At any time, type <code>@PKR help</code> to see a quick help card with shortcuts. 
-              For additional troubleshooting, visit our <a href="https://pkrbot.com/support.html">Support page</a>.
-            </p>
-
-          </div><!-- .inner -->
-        </div><!-- .container -->
-      </div><!-- .article-single__content -->
-    </article>
-  </section>
-</main>
-
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer--logo">
-      <a href="#top-of-page" class="footer-brand" title="Go to Top of Page">
-        <img src="https://magnataur.com/wp-content/themes/magnataur-custom-theme/assets/img/svg/logo-white.svg" alt="Company Logo">
-      </a>
-    </div>
-
-    <div class="footer--menu">
-      <div class="footer-nav-wrap">
-        <ul class="footer-menu">
-          <li><a href="https://magnataur.com/about/">About</a></li>
-          <li><a href="https://magnataur.com/approach/">Approach</a></li>
-          <li><a href="https://magnataur.com/services/">Services</a></li>
-          <li><a href="https://magnataur.com/insights/">Insights</a></li>
-        </ul>
+      <div class="footer--copyright">
+        <p>copyright 2025 magnataur. all rights reserved.</p>
       </div>
     </div>
+  </footer>
 
-    <div class="footer--copyright">
-      <p>Copyright © 2025 Magnataur. All rights reserved.</p>
-    </div>
-  </div>
-</footer>
-
-<!-- Scripts -->
-<script src="https://magnataur.com/wp-includes/js/jquery/jquery.min.js"></script>
-<script src="https://magnataur.com/wp-includes/js/jquery/jquery-migrate.min.js"></script>
-<script src="https://magnataur.com/wp-content/themes/magnataur-custom-theme/assets/js/all.min.js"></script>
+  <!-- (Optional) site scripts -->
+  <script src="https://magnataur.com/wp-includes/js/jquery/jquery.min.js"></script>
 </body>
 </html>
